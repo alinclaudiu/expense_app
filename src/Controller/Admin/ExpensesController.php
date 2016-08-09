@@ -85,23 +85,25 @@ class ExpensesController extends AppController
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
+    //TODO: create vendors' list
     public function addExpense()
     {
         $user_role = $this->Auth->user('role_id');
-        $permission = $this->checkUserPermission($user_role, 3, 'C');
+        $permission = $this->checkUserPermission($user_role, 2, 'C');
+        $types = $this->Expenses->ExpensesTypes->find('list');
         if($permission === true){
-            $this->loadModel('ExpensesTypes');
-            $expense = $this->ExpensesTypes->newEntity();
+            $this->loadModel('Expenses');
+            $expense = $this->Expenses->newEntity();
             if ($this->request->is('post')) {
-                $expense = $this->ExpensesTypes->patchEntity($expense, $this->request->data);
-                if ($this->ExpensesTypes->save($expense)) {
-                    $this->Flash->success(__('The expenses type has been saved.'));
-                    return $this->redirect(['action' => 'expenses_types']);
+                $expense = $this->Expenses->patchEntity($expense, $this->request->data);
+                if ($this->Expenses->save($expense)) {
+                    $this->Flash->success(__('The expenses has been saved.'));
+                    return $this->redirect(['action' => 'expenses']);
                 } else {
                     $this->Flash->error(__('The expenses type could not be saved. Please, try again.'));
                 }
             }
-            $this->set(compact('expense'));
+            $this->set(compact('expense','types'));
             $this->set('_serialize', ['expenses']);
         }else{
             $this->Flash->success(__('Sorry you are not allowed to use that resource!.'));
