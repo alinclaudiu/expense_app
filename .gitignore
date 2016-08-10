@@ -3,3 +3,8 @@
 /tmp/*
 /logs/*
 /webroot/js/tinymce/*
+*.iml
+*.idea/workspace.xml
+
+
+.idea/workspace.xml
