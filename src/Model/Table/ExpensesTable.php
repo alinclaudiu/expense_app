@@ -157,5 +157,10 @@ class ExpensesTable extends Table
         return $validator;
     }
 
+    public function getExpense($id){
+        $vendor = $this->findById($id)->first();
+        return $vendor;
+    }
+
 
 }
