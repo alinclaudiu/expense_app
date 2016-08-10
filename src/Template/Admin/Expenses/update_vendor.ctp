@@ -12,7 +12,7 @@ $this->Html->addCrumb(__('Update Vendor'));
                 </div>
             </div>
             <div class="card-body">
-                <?= $this->Form->create($vendor, ['templates' => 'template_form_1_column']) ?>
+                <?= $this->Form->create($vendors, ['templates' => 'template_form_1_column']) ?>
                     <?php
                         echo $this->Form->input('name');
                         echo $this->Form->input('id');

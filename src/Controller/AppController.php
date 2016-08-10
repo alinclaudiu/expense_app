@@ -116,6 +116,18 @@ class AppController extends Controller
     }
 
     /**
+     * @param $length
+     * @return string
+     */
+    public function portalNo($length){
+        $result = '';
+        for($i = 0; $i < $length; $i++){
+            $result .= mt_rand(1,9);
+        }
+        return $result;
+    }
+
+    /**
      * Before render callback.
      *
      * @param \Cake\Event\Event $event The beforeRender event.
