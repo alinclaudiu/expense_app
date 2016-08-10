@@ -19,6 +19,8 @@ use Cake\Controller\Controller;
 use Cake\Core\Configure;
 use Cake\Event\Event;
 use Cake\ORM\TableRegistry;
+use Cake\Mailer\Email;
+
 
 
 /**
@@ -158,5 +160,14 @@ class AppController extends Controller
         } else {
             return false;
         }
+    }
+
+    public function sendNotification($mail, $subject, $message){
+        $email = new Email('default');
+        $email->from(['expenses@myexpenses.com' => 'My Expenses'])
+            ->to($mail)
+            ->subject($subject)
+            ->send($message);
+        return $email;
     }
 }
