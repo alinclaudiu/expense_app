@@ -50,7 +50,7 @@ $this->Html->scriptBlock('
                         <tr>
                             <td>
                                 <?=$this->Html->link('<i class="fa fa-search"></i>', ['action' => 'view', $expenses_type->id], ['escape' => false])?>&nbsp;
-                                <?=$this->Html->link('<i class="fa fa-edit"></i>', ['action' => 'update_expense_type',
+                                <?=$this->Html->link('<i class="fa fa-edit"></i>', ['action' => 'update_vendor',
                                 $expenses_type->id], ['escape' => false])?>&nbsp;
                                 <?=$this->Form->postLink('<i class="fa fa-trash"></i>', ['action' =>
                                 'delete_expense_type', $expenses_type->id], ['confirm' => __('Are you sure you want to
