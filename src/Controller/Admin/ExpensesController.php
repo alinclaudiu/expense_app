@@ -27,7 +27,7 @@ class ExpensesController extends AppController
     {
         parent::initialize();
         $this->loadComponent('Search.Prg', [
-            'actions' => ['index'],
+            'actions' => ['expenses'],
         ]);
 
         //Allow guest to access this area
@@ -64,6 +64,18 @@ class ExpensesController extends AppController
         $this->set('_serialize', ['vendors']);
     }
 
+    public function expenses()
+    {
+        $this->paginate = [
+            'contain' => ['Vendors','ExpensesTypes'],
+        ];
+        $expenses = $this->paginate($this->Expenses->find('search', $this->Expenses->filterParams($this->request->query)));
+        $vendors = $this->Expenses->Vendors->find('list');
+        $expenses_type = $this->Expenses->ExpensesTypes->find('list');
+        $this->set(compact('expenses','vendors','expenses_type'));
+        $this->set('_serialize', ['expenses']);
+    }
+
 
     /**
      * View method
@@ -74,10 +86,9 @@ class ExpensesController extends AppController
      */
     public function view($id = null)
     {
-        $user = $this->Users->get($id, ['contain' => ['Roles']]);
-
-        $this->set('user', $user);
-        $this->set('_serialize', ['user']);
+        $expense = $this->Expenses->get($id, ['contain' => ['Vendors', 'ExpensesTypes', 'Users']]);
+        $this->set('expense', $expense);
+        $this->set('_serialize', ['expense']);
     }
 
     /**
@@ -85,16 +96,17 @@ class ExpensesController extends AppController
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
-    //TODO: create vendors' list
     public function addExpense()
     {
         $user_role = $this->Auth->user('role_id');
         $permission = $this->checkUserPermission($user_role, 2, 'C');
-        $types = $this->Expenses->ExpensesTypes->find('list');
+        $expense = $this->Expenses->newEntity();
+        $this->loadModel('Expenses');
+        $this->loadModel('ExpensesTypes');
+        $this->loadModel('Vendors');
         if($permission === true){
-            $this->loadModel('Expenses');
-            $expense = $this->Expenses->newEntity();
             if ($this->request->is('post')) {
+                $this->request->data['user_id'] = $this->Auth->user('id');
                 $expense = $this->Expenses->patchEntity($expense, $this->request->data);
                 if ($this->Expenses->save($expense)) {
                     $this->Flash->success(__('The expenses has been saved.'));
@@ -103,12 +115,15 @@ class ExpensesController extends AppController
                     $this->Flash->error(__('The expenses type could not be saved. Please, try again.'));
                 }
             }
-            $this->set(compact('expense','types'));
-            $this->set('_serialize', ['expenses']);
         }else{
             $this->Flash->success(__('Sorry you are not allowed to use that resource!.'));
             return $this->redirect(['action' => 'expenses_types']);
         }
+        $types = $this->Expenses->ExpensesTypes->find('list');
+        $vendors = $this->Expenses->Vendors->find('list');
+        $ref_no = $this->portalNo(10);
+        $this->set(compact('expense','types','vendors','ref_no'));
+        $this->set('_serialize', ['expenses']);
     }
 
     public function addExpenseType()

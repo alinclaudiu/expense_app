@@ -24,7 +24,10 @@
                 echo $this->Menu->groupLink('<span class="icon fa fa-gears"></span><span class="title">' .
                 __('Expenses Management') . '</span>', [
                 [__('Add An Expense'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'add_expense']],
-                [__('View All Expenses'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'view_expenses']],
+                [__('View All Expenses'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'expenses']],
+                [__('View Pending Expenses'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'expenses']],
+                [__('View Approved Expenses'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'expenses']],
+                [__('View Rejected Expenses'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'expenses']],
                 ]
                 );
                 echo $this->Menu->groupLink('<span class="icon fa fa-gears"></span><span class="title">' .

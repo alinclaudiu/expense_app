@@ -18,7 +18,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $modified
  * @property \Cake\I18n\Time $token_created
  */
-class ExpensesType extends Entity
+class Expense extends Entity
 {
 
     /**
@@ -33,5 +33,6 @@ class ExpensesType extends Entity
     protected $_accessible = [
         '*' => true,
         'id' => false, ];
+
 
 }
