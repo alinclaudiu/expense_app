@@ -105,15 +105,6 @@ class ExpensesController extends AppController
                 if ($saved_expense) {
                     $vendor_name = $this->Vendors->getVendor($vendor);
                     $type = $this->ExpensesTypes->getType($type);
-                    $msg = array(
-                        'type' => $type['name'],
-                        'title' => $title,
-                        'desc' => $desc,
-                        'amt' => $amt,
-                        'vendor' => $vendor_name['name'],
-                        'date' => $exp_date,
-                        'user' => $this->Auth->user('full_name')
-                    );
                     $msg = "Dear Admin,\n";
                     $msg .= "A new expense request has been made and requires your approval. Please find details
                     below:\n";
@@ -122,8 +113,10 @@ class ExpensesController extends AppController
                     $msg .= "Request Title: ".$title."\n";
                     $msg .= "Request Description: ".$desc."\n";
                     $msg .= "Request Amount: ".$amt."\n";
-                    $msg .= "Request Vendor: ".$vendor."\n";
+                    $msg .= "Request Vendor: ".$vendor_name['name']."\n";
                     $msg .= "Request Date: ".$exp_date."\n";
+                    $msg .= "Best Regards \n";
+                    $msg .= "My Expenses App!";
                     foreach($admin_users as $admin){
                         $this->sendNotification($admin['email'], 'New Expense Request', $msg);
                     }
