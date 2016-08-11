@@ -29,20 +29,9 @@ class ExpensesController extends AppController
         $this->loadComponent('Search.Prg', [
             'actions' => ['expenses'],
         ]);
-
-        //Allow guest to access this area
-        //$this->Auth->allow(['lostPassword', 'register', 'activeAccount', 'resetPassword', 'login']);
-
-        /*if (in_array($this->request->action, [
-            'lostPassword',
-            'register',
-            'activeAccount',
-            'resetPassword',
-            'login',
-        ])) {
-            $this->loadComponent('Csrf');
-            $this->loadComponent('Recaptcha');
-        }*/
+        $this->loadModel('Expenses');
+        $this->loadModel('ExpensesTypes');
+        $this->loadModel('Vendors');
     }
 
     /**
@@ -101,14 +90,29 @@ class ExpensesController extends AppController
         $user_role = $this->Auth->user('role_id');
         $permission = $this->checkUserPermission($user_role, 2, 'C');
         $expense = $this->Expenses->newEntity();
-        $this->loadModel('Expenses');
-        $this->loadModel('ExpensesTypes');
-        $this->loadModel('Vendors');
         if($permission === true){
             if ($this->request->is('post')) {
                 $this->request->data['user_id'] = $this->Auth->user('id');
+                $type = $this->request->data['expenses_type_id'];
+                $title = $this->request->data['name'];
+                $desc = $this->request->data['description'];
+                $amt = $this->request->data['amount'];
+                $exp_date = $this->request->data['expense_date'];
+                $vendor = $this->request->data['vendor_id'];
                 $expense = $this->Expenses->patchEntity($expense, $this->request->data);
-                if ($this->Expenses->save($expense)) {
+                $saved_expense = $this->Expenses->save($expense);
+                if ($saved_expense) {
+                    $vendor_name = $this->Vendors->getVendor($vendor);
+                    $msg = 'Hello,'.'<br/>';
+                    $msg .= 'A new expense request has been made and requires your approval. Please find details
+                    below:'.'<br/>';
+                    $msg .= 'Expense Type: '.$type.'<br/>';
+                    $msg .= 'Title: '.$title.'<br/>';
+                    $msg .= 'Description: '.$desc.'<br/>';
+                    $msg .= 'Amount: '.$amt.'<br/>';
+                    $msg .= 'Vendor: '.$vendor_name['name'].'<br/>';
+                    $msg .= 'Expense date: '.$exp_date.'<br/>';
+                    $this->sendNotification('noibilism@gmail.com', 'New Expense Request', $msg);
                     $this->Flash->success(__('The expenses has been saved.'));
                     return $this->redirect(['action' => 'expenses']);
                 } else {
@@ -126,12 +130,36 @@ class ExpensesController extends AppController
         $this->set('_serialize', ['expenses']);
     }
 
+    public function updateExpense($id = null)
+    {
+        $expense = $this->Expenses->get($id);
+        $status = $expense['status'];
+        if($status !== 1){
+                $this->Flash->error(__('Sorry! you cannot update this expense again.'));
+                return $this->redirect(['action' => 'expenses']);
+        }
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $this->request->data['ExpensesTypes']['updated'] = date('Y-m-d H:i:s');
+            $expense = $this->Expenses->patchEntity($expense, $this->request->data);
+            if ($this->Expenses->save($expense)) {
+                $this->Flash->success(__('The Expense type has been updated.'));
+                return $this->redirect(['action' => 'expenses']);
+            } else {
+                $this->Flash->error(__('The Expense could not be saved. Please, try again.'));
+            }
+        }
+        $types = $this->Expenses->ExpensesTypes->find('list');
+        $vendors = $this->Expenses->Vendors->find('list');
+        $this->set(compact('expense','types','vendors'));
+        $this->set('_serialize', ['expense']);
+    }
+
+
     public function addExpenseType()
     {
         $user_role = $this->Auth->user('role_id');
         $permission = $this->checkUserPermission($user_role, 3, 'C');
         if($permission === true){
-            $this->loadModel('ExpensesTypes');
             $expense = $this->ExpensesTypes->newEntity();
             if ($this->request->is('post')) {
                 $expense = $this->ExpensesTypes->patchEntity($expense, $this->request->data);
@@ -155,7 +183,6 @@ class ExpensesController extends AppController
         $user_role = $this->Auth->user('role_id');
         $permission = $this->checkUserPermission($user_role, 4, 'C');
         if($permission === true){
-            $this->loadModel('Vendors');
             $vendors = $this->Vendors->newEntity();
             if ($this->request->is('post')) {
                 $vendors = $this->Vendors->patchEntity($vendors, $this->request->data);
@@ -174,10 +201,40 @@ class ExpensesController extends AppController
         }
     }
 
+    public function changeStatus($id, $code){
+        if(!empty($id) && !empty($code)){
+            $expense = $this->Expenses->get($id);
+            $this->request->data['Expenses']['id'] = $id;
+            $this->request->data['Expenses']['status'] = $code;
+            $expense = $this->Expenses->patchEntity($expense, $this->request->data);
+            $msg_success = 'Hello,'.'<br/>';
+            $msg_success .= 'The expense, '.$expense['code'].' with the title '.$expense['name'].'<br/>';
+            $msg_success .= 'Has being approved.';
+            $msg_fail = 'Hello,'.'<br/>';
+            $msg_fail .= 'The expense, '.$expense['code'].' with the title '.$expense['name'].'<br/>';
+            $msg_fail .= 'Has being rejected.';
+            $user = $expense['user_id'];
+            $email = $this->Users->findById($user);
+            if($this->Expenses->save($expense)){
+                switch($code){
+                    case 2;
+                        $this->sendNotification($email, 'Expense Request Status Change', $msg_success);
+                        $this->Flash->success(__('The Expense has been approved.'));
+                    break;
+                    case 3;
+                        $this->sendNotification($email, 'Expense Request Status Change', $msg_fail);
+                        $this->Flash->error(__('The Expense has been rejected.'));
+                    break;
+                    default;
+                        $this->Flash->error(__('The Expense is still pending. Please try again!'));
+                }
+                return $this->redirect(['action' => 'expenses']);
+            }
+        }
+    }
 
     public function updateExpenseType($id = null)
     {
-        $this->loadModel('ExpensesTypes');
         $expense = $this->ExpensesTypes->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $this->request->data['ExpensesTypes']['updated'] = date('Y-m-d H:i:s');
@@ -195,7 +252,6 @@ class ExpensesController extends AppController
 
     public function updateVendor($id = null)
     {
-        $this->loadModel('Vendors');
         $vendors = $this->Vendors->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $this->request->data['Vendors']['updated'] = date('Y-m-d H:i:s');
@@ -214,7 +270,6 @@ class ExpensesController extends AppController
     public function deleteExpenseType($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $this->loadModel('ExpensesTypes');
         $user = $this->ExpensesTypes->get($id);
         if ($this->ExpensesTypes->delete($user)) {
             $this->Flash->success(__('The expenses type has been deleted.'));

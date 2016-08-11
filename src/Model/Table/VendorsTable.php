@@ -54,13 +54,13 @@ class VendorsTable extends Table
             ])
             ->add('created', 'Search.Callback', [
                 'callback' => function ($query, $args, $manager) {
-                    return $query->andWhere(["DATE(created) >=" => $args['created']]);
-                }
+                        return $query->andWhere(["DATE(created) >=" => $args['created']]);
+                    }
             ])
             ->add('modified', 'Search.Callback', [
                 'callback' => function ($query, $args, $manager) {
-                    return $query->andWhere(["DATE(updated) <=" => $args['modified']]);
-                }
+                        return $query->andWhere(["DATE(updated) <=" => $args['modified']]);
+                    }
             ]);
 
         $this->hasMany('Expenses', [
@@ -98,7 +98,12 @@ class VendorsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['name']));
-
         return $rules;
     }
+
+    public function getVendor($id){
+        $vendor = $this->findById($id)->first();
+        return $vendor;
+    }
+
 }
