@@ -3,8 +3,13 @@
 /tmp/*
 /logs/*
 /webroot/js/tinymce/*
+<<<<<<< HEAD
 *.iml
 *.idea/workspace.xml
 
+=======
+
+.idea/workspace.xml
+>>>>>>> bc12b868d827cd3484a9e3f14508d41fc653a5b8
 
 .idea/workspace.xml

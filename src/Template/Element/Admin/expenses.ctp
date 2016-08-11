@@ -9,6 +9,21 @@ $this->Html->scriptBlock('
 $("#created").datepicker({autoclose: true,todayHighlight: true});
 $("#modified").datepicker({autoclose: true,todayHighlight: true});
 ', ['block' => true]);
+function setStatus($status){
+    switch($status){
+        case 1;
+        echo 'Pending';
+        break;
+        case 2;
+        echo 'Approved';
+        break;
+        case 3;
+        echo 'Rejected';
+        break;
+        default;
+        echo 'Pending';
+    }
+}
 ?>
 <div class="row">
     <div class="col-xs-12">
@@ -25,6 +40,7 @@ $("#modified").datepicker({autoclose: true,todayHighlight: true});
                         => 'btn btn-success', 'escape' => false])?>&nbsp;
                         <?= $this->Html->link('<i class="fa fa-refresh"></i>', ['action' => 'expenses'], ['class' =>
                         'btn btn-default', 'escape' => false])?>
+                        <?= $i = 1; ?>
                     </div>
                 </div>
             </div>
@@ -67,19 +83,21 @@ $("#modified").datepicker({autoclose: true,todayHighlight: true});
                     <?php foreach ($expenses as $expenses_type): ?>
                     <tr>
                         <td>
-                            <?=$this->Html->link('<i class="fa fa-search"></i>', ['action' => 'view_expense',
+                            <?=$this->Html->link('<i class="glyphicon glyphicon-pencil"></i>', ['action' => 'update_expense',
                             $expenses_type->id], ['escape' => false])?>&nbsp;
-                            <?=$this->Html->link('<i class="fa fa-edit"></i>', ['action' => 'update_expense',
-                            $expenses_type->id], ['escape' => false])?>&nbsp;
+                            <?=$this->Html->link('<i class="glyphicon glyphicon-ok"></i>', ['action' =>
+                            'change_status',$expenses_type->id,2], ['escape' => false])?>&nbsp;
+                            <?=$this->Html->link('<i class="glyphicon glyphicon-remove"></i>', ['action' => 'change_status',
+                            $expenses_type->id,3], ['escape' => false])?>&nbsp;
                         </td>
-                        <td><?=$this->Number->format($expenses_type->id)?></td>
+                        <td><?=$i++;?></td>
                         <td><?=h($expenses_type->name)?></td>
                         <td><?=$expenses_type->has('expenses_type') ?
                             $this->Html->link(h($expenses_type->expenses_type->name),
                             ['prefix' =>
                             'admin', 'controller' => 'Expenses', 'action' => 'expenses_types']) : ''?>
                         </td>
-                        <td><?=$this->Number->format($expenses_type->amount)?></td>
+                        <td>&#8358;<?=$this->Number->format($expenses_type->amount)?></td>
                         <td><?=$expenses_type->has('vendor') ? $this->Html->link(h($expenses_type->vendor->name),
                             ['prefix' =>
                             'admin', 'controller' => 'Expenses', 'action' => 'vendors']) : ''?>
@@ -87,7 +105,7 @@ $("#modified").datepicker({autoclose: true,todayHighlight: true});
                         <td><?=$expenses_type->reference_no?></td>
                         <td><?=h($expenses_type->expense_date)?></td>
                         <td><?=h($expenses_type->created)?></td>
-                        <td><?=h($expenses_type->status)?></td>
+                        <td><?=h(setStatus($expenses_type->status))?></td>
                     </tr>
                     <?php endforeach;?>
                     </tbody>
