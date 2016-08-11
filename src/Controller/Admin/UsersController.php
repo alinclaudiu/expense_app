@@ -82,7 +82,9 @@ class UsersController extends AppController
      */
     public function add()
     {
-        $user = $this->Users->newEntity();
+        $permission = $this->checkUserPermission($this->Auth->user('role_id'),1,'C');
+        if($permission === true){
+            $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {
@@ -96,6 +98,10 @@ class UsersController extends AppController
         $roles = $this->Users->Roles->find('list');
         $this->set(compact('user', 'roles'));
         $this->set('_serialize', ['user']);
+        }else{
+            $this->Flash->success(__('Sorry you are not allowed to use that resource!.'));
+            return $this->redirect(['action' => 'index']);
+        }
     }
 
     /**

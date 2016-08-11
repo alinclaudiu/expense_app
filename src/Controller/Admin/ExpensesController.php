@@ -114,8 +114,18 @@ class ExpensesController extends AppController
                         'date' => $exp_date,
                         'user' => $this->Auth->user('full_name')
                     );
+                    $msg = "Dear Admin,\n";
+                    $msg .= "A new expense request has been made and requires your approval. Please find details
+                    below:\n";
+                    $msg .= "Request Made By: ".$this->Auth->user('full_name')."\n";
+                    $msg .= "Request Type: ".$type['name']."\n";
+                    $msg .= "Request Title: ".$title."\n";
+                    $msg .= "Request Description: ".$desc."\n";
+                    $msg .= "Request Amount: ".$amt."\n";
+                    $msg .= "Request Vendor: ".$vendor."\n";
+                    $msg .= "Request Date: ".$exp_date."\n";
                     foreach($admin_users as $admin){
-                        $this->sendNotification($admin['email'], 'New Expense Request', $msg, 'approved');
+                        $this->sendNotification($admin['email'], 'New Expense Request', $msg);
                     }
                     $this->Flash->success(__('The expenses has been saved.'));
                     return $this->redirect(['action' => 'expenses']);
