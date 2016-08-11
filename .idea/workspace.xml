@@ -23,46 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Template/Admin/Dashboard/index.ctp">
+      <file leaf-file-name="approved.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Template/Email/html/Expenses/approved.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+            <state line="11" column="55" selection-start="370" selection-end="370" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="495">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Template/Layout/default.ctp">
+      <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="10" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="975">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webroot/css/admin_style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="26190">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourcesComponent.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/Component/ResourcesComponent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/AppController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="5" selection-start="5000" selection-end="5000" vertical-scroll-proportion="1.3843058" vertical-offset="1472" max-vertical-offset="2280">
+            <state line="195" column="78" selection-start="7576" selection-end="7581" vertical-scroll-proportion="-3.14" vertical-offset="2768" max-vertical-offset="5265">
               <folding />
             </state>
           </provider>
@@ -71,43 +44,27 @@
       <file leaf-file-name="ExpensesController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/Admin/ExpensesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="11" selection-start="5336" selection-end="5336" vertical-scroll-proportion="0.0" vertical-offset="2340" max-vertical-offset="9675">
+            <state line="117" column="103" selection-start="3999" selection-end="3999" vertical-scroll-proportion="-15.75" vertical-offset="1377" max-vertical-offset="10560">
+              <folding>
+                <element signature="e#39#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/AppController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="167" column="64" selection-start="5244" selection-end="5244" vertical-scroll-proportion="-14.541667" vertical-offset="1901" max-vertical-offset="2445">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_vendor.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/add_vendor.ctp">
+      <file leaf-file-name="default.ctp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Template/Layout/Email/html/default.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="450">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update_vendor.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/update_vendor.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="6" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vendors.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/vendors.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="35" selection-start="2097" selection-end="2097" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1230">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar_side.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Template/Element/Admin/navbar_side.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="103" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="870">
+            <state line="155" column="21" selection-start="4087" selection-end="4087" vertical-scroll-proportion="0.30374753" vertical-offset="2171" max-vertical-offset="3000">
               <folding />
             </state>
           </provider>
@@ -127,7 +84,6 @@
         <option value="$PROJECT_DIR$/config/acl.ini" />
         <option value="$PROJECT_DIR$/config/routes.php" />
         <option value="$PROJECT_DIR$/config/bootstrap.php" />
-        <option value="$PROJECT_DIR$/src/Model/Entity/ExpensesType.php" />
         <option value="$PROJECT_DIR$/src/Template/Admin/Expenses/add_expense_type.ctp" />
         <option value="$PROJECT_DIR$/src/Template/Admin/Expenses/update_expense_type.ctp" />
         <option value="$PROJECT_DIR$/src/Template/Admin/Expenses/expenses_types.ctp" />
@@ -136,11 +92,25 @@
         <option value="$PROJECT_DIR$/src/View/Helper/RecaptchaHelper.php" />
         <option value="$PROJECT_DIR$/src/Core/Setting.php" />
         <option value="$PROJECT_DIR$/src/Template/Admin/Expenses/add_vendor.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Admin/Expenses/update_vendor.ctp" />
-        <option value="$PROJECT_DIR$/src/Template/Element/Admin/navbar_side.ctp" />
         <option value="$PROJECT_DIR$/src/Template/Admin/Expenses/vendors.ctp" />
-        <option value="$PROJECT_DIR$/src/Controller/Admin/ExpensesController.php" />
+        <option value="$PROJECT_DIR$/src/Template/Admin/Expenses/update_vendor.ctp" />
+        <option value="$PROJECT_DIR$/DB/db_dump.sql" />
+        <option value="$PROJECT_DIR$/src/Model/Table/Expense.php" />
+        <option value="$PROJECT_DIR$/src/Model/Table/ExpensesTypeTable.php" />
+        <option value="$PROJECT_DIR$/src/Model/Table/VendorsTable.php" />
+        <option value="$PROJECT_DIR$/src/Model/Table/ExpensesTable.php" />
+        <option value="$PROJECT_DIR$/src/Model/Entity/Expense.php" />
+        <option value="$PROJECT_DIR$/src/Model/Entity/ExpensesType.php" />
+        <option value="$PROJECT_DIR$/src/Model/Table/RolesResourcesTable.php" />
+        <option value="$PROJECT_DIR$/src/Template/Admin/Expenses/add_expense.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Element/Admin/navbar_side.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Element/Admin/expenses.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Admin/Expenses/expenses.ctp" />
+        <option value="$PROJECT_DIR$/src/Model/Table/UsersTable.php" />
         <option value="$PROJECT_DIR$/src/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/src/Model/Table/ExpensesTypesTable.php" />
+        <option value="$PROJECT_DIR$/src/Template/Email/html/Expenses/approved.ctp" />
+        <option value="$PROJECT_DIR$/src/Controller/Admin/ExpensesController.php" />
       </list>
     </option>
   </component>
@@ -222,7 +192,117 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Email" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Email" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -239,13 +319,18 @@
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Template/Email/html/Expenses" />
+      <recent name="$PROJECT_DIR$/src/Model/Table" />
+      <recent name="$PROJECT_DIR$/src/Model/Entity" />
       <recent name="$PROJECT_DIR$/src/Template/Admin/Expenses" />
       <recent name="$PROJECT_DIR$/src/Controller/Component" />
-      <recent name="$PROJECT_DIR$/src/Model/Entity" />
-      <recent name="$PROJECT_DIR$/src/Controller/Admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Model/Table" />
     </key>
   </component>
   <component name="RunManager">
@@ -275,10 +360,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1614" height="944" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -314,114 +399,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Dashboard/index.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Layout/default.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="10" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/admin_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="26190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Component/ResourcesComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="9" selection-start="4754" selection-end="4754" vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="2100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Admin/ExpensesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="11" selection-start="4489" selection-end="4489" vertical-scroll-proportion="0.0" vertical-offset="2085" max-vertical-offset="9420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/add_vendor.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="75" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/update_vendor.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="10" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/vendors.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="35" selection-start="2097" selection-end="2097" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Element/Admin/navbar_side.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="103" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Admin/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="13" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="7680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Helper/RecaptchaHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="301" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="885" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/Setting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="6" selection-start="2052" selection-end="2052" vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="5205">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Users/add.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="41" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="525" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="39" selection-start="4580" selection-end="4580" vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="2385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Component/TabsComponent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100" />
@@ -434,15 +411,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Component/ResourcesComponent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Admin/ExpensesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="46" selection-start="3562" selection-end="3562" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="8565">
-          <folding />
+          <folding>
+            <element signature="e#39#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -469,11 +446,6 @@
         <state line="272" column="41" selection-start="26864" selection-end="26864" vertical-scroll-proportion="0.47095436" vertical-offset="3853" max-vertical-offset="4335" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="33" selection-start="9049" selection-end="9049" vertical-scroll-proportion="-38.24" vertical-offset="1553" max-vertical-offset="5265" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="230" column="24" selection-start="7365" selection-end="7369" vertical-scroll-proportion="-60.9" vertical-offset="0" max-vertical-offset="3180" />
@@ -487,11 +459,6 @@
     <entry file="file://$PROJECT_DIR$/src/Controller/Admin/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="7" selection-start="217" selection-end="217" vertical-scroll-proportion="0.28054863" vertical-offset="0" max-vertical-offset="802" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Entity/ExpensesType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="6" selection-start="824" selection-end="824" vertical-scroll-proportion="-14.666667" vertical-offset="68" max-vertical-offset="870" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/add_expense_type.ctp">
@@ -509,21 +476,9 @@
         <state line="60" column="65" selection-start="3440" selection-end="3440" vertical-scroll-proportion="-26.25" vertical-offset="270" max-vertical-offset="1230" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Entity/Role.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="735" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Entity/Configuration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="26" selection-start="478" selection-end="478" vertical-scroll-proportion="5.0416665" vertical-offset="466" max-vertical-offset="1245" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="885">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Admin/Users/add.ctp">
@@ -543,9 +498,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Component/ResourcesComponent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/Helper/RecaptchaHelper.php">
@@ -560,72 +513,194 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Admin/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="13" selection-start="985" selection-end="985" vertical-scroll-proportion="-0.13478819" vertical-offset="600" max-vertical-offset="7680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Admin/Dashboard/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Layout/default.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="10" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="975">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="545" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/css/admin_style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="26190">
-          <folding />
-        </state>
+        <state line="22" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="26190" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/add_vendor.ctp">
+    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/vendors.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="450">
-          <folding />
-        </state>
+        <state line="52" column="110" selection-start="2745" selection-end="2745" vertical-scroll-proportion="-6.875" vertical-offset="615" max-vertical-offset="1230" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/update_vendor.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="6" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="465">
+        <state line="14" column="48" selection-start="610" selection-end="610" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="465" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/add_vendor.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="14" selection-start="919" selection-end="919" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DB/db_dump.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="336" column="0" selection-start="13938" selection-end="13938" vertical-scroll-proportion="-9.28" vertical-offset="4576" max-vertical-offset="5130" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="7" selection-start="481" selection-end="481" vertical-scroll-proportion="0.48692152" vertical-offset="88" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/RolesTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="9.916667" vertical-offset="238" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/Expense.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="925" selection-end="925" vertical-scroll-proportion="-15.708333" vertical-offset="163" max-vertical-offset="660" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/RolesResourcesTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="503" selection-end="503" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/add_expense.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="22" selection-start="1204" selection-end="1204" vertical-scroll-proportion="-12.583333" vertical-offset="43" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Entity/ExpensesType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="929" selection-end="929" vertical-scroll-proportion="-15.708333" vertical-offset="148" max-vertical-offset="645" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Users/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="28" selection-start="2240" selection-end="3014" vertical-scroll-proportion="-11.25" vertical-offset="510" max-vertical-offset="1410">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Element/Admin/navbar_side.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="103" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="870">
+        <state line="29" column="34" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/vendors.ctp">
+    <entry file="file://$PROJECT_DIR$/src/Template/Layout/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="35" selection-start="2097" selection-end="2097" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1230">
+        <state line="42" column="30" selection-start="1805" selection-end="1850" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Element/Admin/expenses.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="0" selection-start="6219" selection-end="6219" vertical-scroll-proportion="0.0" vertical-offset="1830" max-vertical-offset="1920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Admin/Expenses/expenses.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="497">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/ExpensesTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="24" selection-start="4083" selection-end="4083" vertical-scroll-proportion="4.9166665" vertical-offset="1993" max-vertical-offset="2490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/UsersTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="332" column="36" selection-start="11183" selection-end="11183" vertical-scroll-proportion="-16.958334" vertical-offset="4483" max-vertical-offset="5055">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="195" column="78" selection-start="7576" selection-end="7581" vertical-scroll-proportion="-3.14" vertical-offset="2768" max-vertical-offset="5265">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Email/html/Users/register.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="41" selection-start="33" selection-end="47" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Email/html/default.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="521">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Admin/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="19" selection-start="1264" selection-end="1379" vertical-scroll-proportion="-6.875" vertical-offset="570" max-vertical-offset="7680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/VendorsTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="0" selection-start="2857" selection-end="2968" vertical-scroll-proportion="-16.708334" vertical-offset="1144" max-vertical-offset="1665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Table/ExpensesTypesTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="5" selection-start="2775" selection-end="2775" vertical-scroll-proportion="-13.208333" vertical-offset="1093" max-vertical-offset="1680">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Admin/ExpensesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="11" selection-start="5336" selection-end="5336" vertical-scroll-proportion="0.0" vertical-offset="2340" max-vertical-offset="9675">
+        <state line="117" column="103" selection-start="3999" selection-end="3999" vertical-scroll-proportion="-15.75" vertical-offset="1377" max-vertical-offset="10560">
+          <folding>
+            <element signature="e#39#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Email/html/Expenses/approved.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="55" selection-start="370" selection-end="370" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="495">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="5" selection-start="5000" selection-end="5000" vertical-scroll-proportion="1.3843058" vertical-offset="1472" max-vertical-offset="2280">
+        <state line="167" column="64" selection-start="5244" selection-end="5244" vertical-scroll-proportion="-14.541667" vertical-offset="1901" max-vertical-offset="2445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Layout/Email/html/default.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="21" selection-start="4087" selection-end="4087" vertical-scroll-proportion="0.30374753" vertical-offset="2171" max-vertical-offset="3000">
           <folding />
         </state>
       </provider>

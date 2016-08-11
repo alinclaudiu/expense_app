@@ -101,4 +101,10 @@ class ExpensesTypesTable extends Table
 
         return $rules;
     }
+
+    public function getType($id){
+        $vendor = $this->findById($id)->first();
+        return $vendor;
+    }
+
 }

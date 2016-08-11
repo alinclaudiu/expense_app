@@ -101,18 +101,22 @@ class ExpensesController extends AppController
                 $vendor = $this->request->data['vendor_id'];
                 $expense = $this->Expenses->patchEntity($expense, $this->request->data);
                 $saved_expense = $this->Expenses->save($expense);
+                $admin_users = $this->Users->getAdminUsers();
                 if ($saved_expense) {
                     $vendor_name = $this->Vendors->getVendor($vendor);
-                    $msg = 'Hello,'.'<br/>';
-                    $msg .= 'A new expense request has been made and requires your approval. Please find details
-                    below:'.'<br/>';
-                    $msg .= 'Expense Type: '.$type.'<br/>';
-                    $msg .= 'Title: '.$title.'<br/>';
-                    $msg .= 'Description: '.$desc.'<br/>';
-                    $msg .= 'Amount: '.$amt.'<br/>';
-                    $msg .= 'Vendor: '.$vendor_name['name'].'<br/>';
-                    $msg .= 'Expense date: '.$exp_date.'<br/>';
-                    $this->sendNotification('noibilism@gmail.com', 'New Expense Request', $msg);
+                    $type = $this->ExpensesTypes->getType($type);
+                    $msg = array(
+                        'type' => $type['name'],
+                        'title' => $title,
+                        'desc' => $desc,
+                        'amt' => $amt,
+                        'vendor' => $vendor_name['name'],
+                        'date' => $exp_date,
+                        'user' => $this->Auth->user('full_name')
+                    );
+                    foreach($admin_users as $admin){
+                        $this->sendNotification($admin['email'], 'New Expense Request', $msg, 'approved');
+                    }
                     $this->Flash->success(__('The expenses has been saved.'));
                     return $this->redirect(['action' => 'expenses']);
                 } else {
@@ -134,7 +138,7 @@ class ExpensesController extends AppController
     {
         $expense = $this->Expenses->get($id);
         $status = $expense['status'];
-        if($status !== 1){
+        if($status !== 1 || $status !== 3){
                 $this->Flash->error(__('Sorry! you cannot update this expense again.'));
                 return $this->redirect(['action' => 'expenses']);
         }
@@ -208,10 +212,10 @@ class ExpensesController extends AppController
             $this->request->data['Expenses']['status'] = $code;
             $expense = $this->Expenses->patchEntity($expense, $this->request->data);
             $msg_success = 'Hello,'.'<br/>';
-            $msg_success .= 'The expense, '.$expense['code'].' with the title '.$expense['name'].'<br/>';
+            $msg_success .= 'The expense, '.$expense['code'].' with the title '.$expense['name'];'<br/>';
             $msg_success .= 'Has being approved.';
             $msg_fail = 'Hello,'.'<br/>';
-            $msg_fail .= 'The expense, '.$expense['code'].' with the title '.$expense['name'].'<br/>';
+            $msg_fail .= 'The expense, '.$expense['code'].' with the title '.$expense['name'];'<br/>';
             $msg_fail .= 'Has being rejected.';
             $user = $expense['user_id'];
             $email = $this->Users->findById($user);

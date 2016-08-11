@@ -329,4 +329,9 @@ class UsersTable extends Table
 
         return $this->save($user);
     }
+
+    public function getAdminUsers(){
+        $users = $this->find('all')->where('role_id', 1);
+        return $users;
+    }
 }

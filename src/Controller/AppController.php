@@ -162,9 +162,10 @@ class AppController extends Controller
         }
     }
 
-    public function sendNotification($mail, $subject, $message){
+    public function sendNotification($mail, $subject, $message, $view){
         $email = new Email('default');
-        $email->from(['expenses@myexpenses.com' => 'My Expenses'])
+        $email->template($view, 'default')
+            ->from(['expenses@myexpenses.com' => 'My Expenses'])
             ->to($mail)
             ->subject($subject)
             ->send($message);
