@@ -14,20 +14,20 @@
                     ['escape' => false]
                 );
                 echo $this->Menu->groupLink('<span class="icon fa fa-gears"></span><span class="title">' .
-                __('Parameters') . '</span>', [
-                        [__('Users'), ['prefix'=>'admin', 'controller' => 'Users', 'action' => 'index']],
-                        [__('Settings'), ['prefix'=>'admin','controller' => 'Setting', 'action' => 'index']],
-                        [__('Expenses Types'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses_types']],
-                        [__('Vendors'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'vendors']],
-                ]
-                );
-                echo $this->Menu->groupLink('<span class="icon fa fa-gears"></span><span class="title">' .
                 __('Expenses Management') . '</span>', [
                 [__('Add An Expense'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'add_expense']],
                 [__('View All Expenses'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses']],
                 [__('View Pending Expenses'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses']],
                 [__('View Approved Expenses'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses']],
                 [__('View Rejected Expenses'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses']],
+                ]
+                );
+                echo $this->Menu->groupLink('<span class="icon fa fa-gears"></span><span class="title">' .
+                __('Parameters') . '</span>', [
+                [__('Users'), ['prefix'=>'admin', 'controller' => 'Users', 'action' => 'index']],
+                [__('Settings'), ['prefix'=>'admin','controller' => 'Setting', 'action' => 'index']],
+                [__('Expenses Types'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses_types']],
+                [__('Vendors'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'vendors']],
                 ]
                 );
                 echo $this->Menu->groupLink('<span class="icon fa fa-gears"></span><span class="title">' .

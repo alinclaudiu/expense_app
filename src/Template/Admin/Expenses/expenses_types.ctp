@@ -1,5 +1,6 @@
 <?php
 $this->assign('title', __('Expenses Types'));
+$this->Html->addCrumb(__('Expenses Management'));
 $this->Html->addCrumb(__('Expenses Types'));
 $this->loadHelper('Search');
 
