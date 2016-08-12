@@ -162,5 +162,31 @@ class ExpensesTable extends Table
         return $vendor;
     }
 
+    public function totalExpensesForTheYear($year){
+        $total = 0;
+        $result = $this
+            ->find('all')
+            ->select('amount')
+            ->where(['status' => 2])
+            ->where(['YEAR(Expenses.created)' => $year]);
+        foreach ($result as $results){
+            $total = $total + $results['amount'];
+        }
+        return $total;
+    }
+
+    public function totalExpensesForTheMonth($month){
+        $total = 0;
+        $result = $this
+            ->find('all')
+            ->select('amount')
+            ->where(['status' => 2])
+            ->where(['MONTH(Expenses.created)' => $month]);
+        foreach ($result as $results){
+            $total = $total + $results['amount'];
+        }
+        return $total;
+    }
+
 
 }

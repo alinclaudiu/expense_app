@@ -19,7 +19,8 @@ $this->Html->addCrumb(__('Add Expense'));
                         echo $this->Form->input('reference_no', array('readonly'=>'readonly', 'value'=>$ref_no));
                         echo $this->Form->input('description');
                         echo $this->Form->input('vendor_id');
-                        echo $this->Form->input('expense_date');
+                        echo $this->Form->input('expense_date', array('id'=>'datetimepicker2', 'type'=>'text',
+                'class'=>'form-control'));
                         echo $this->Form->input('amount');
                     ?>
                 <?= $this->Form->button(__('Add Expense'), ['class' => 'btn btn-primary']) ?>
@@ -28,3 +29,8 @@ $this->Html->addCrumb(__('Add Expense'));
         </div>
     </div>
 </div>
+        <script>
+            $('#datepicker').datepicker({
+                format: 'mm-dd-yyyy'
+            });
+        </script>

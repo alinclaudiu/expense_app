@@ -17,13 +17,17 @@
     <?=$this->Html->css('//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')?>
     <?=$this->Html->css('//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')?>
     <?=$this->Html->css('//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')?>
+    <?=$this->Html->css('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.css')?>
     <?=$this->fetch('css')?>
     <!-- CSS App -->
     <?=$this->Html->css('admin_style.min')?>
     <?=$this->Html->css('themes/flat-blue.min')?>
+    <?=$this->Html->css('datepicker')?>
     <!--[if lt IE 9]>
         <?=$this->Html->script('//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js')?>
         <?=$this->Html->script('//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js')?>
+        <?=$this->Html->script('//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js')?>
+        <?=$this->Html->script('//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js')?>
     <![endif]-->
 </head>
 <body class="flat-blue">
@@ -54,6 +58,9 @@
     <?=$this->Html->script('//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js')?>
     <?=$this->Html->script('//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js')?>
     <?=$this->Html->script('app')?>
+    <script>
+        $('#datetimepicker2').datetimepicker();
+    </script>
     <?=$this->fetch('script')?>
 </body>
 </html>

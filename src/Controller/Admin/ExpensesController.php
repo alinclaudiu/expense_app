@@ -29,10 +29,6 @@ class ExpensesController extends AppController
         $this->loadComponent('Search.Prg', [
             'actions' => ['expenses'],
         ]);
-        $this->loadModel('Expenses');
-        $this->loadModel('ExpensesTypes');
-        $this->loadModel('Vendors');
-        $this->loadModel('Users');
     }
 
     /**

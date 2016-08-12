@@ -46,10 +46,13 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
-
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Cookie');
+        $this->loadModel('Expenses');
+        $this->loadModel('ExpensesTypes');
+        $this->loadModel('Vendors');
+        $this->loadModel('Users');
         $this->loadComponent('Auth', [
             /*'authorize' => [
                 'TinyAuth.Tiny' => [
