@@ -702,6 +702,7 @@ div.mce-fullscreen {
 
 .panel {
     border-radius: 1px;
+    width: 450px;
 }
 
 .panel .panel-heading {
