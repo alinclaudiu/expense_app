@@ -15,25 +15,25 @@
                 );
                 echo $this->Menu->groupLink('<span class="icon fa fa-gears"></span><span class="title">' .
                 __('Parameters') . '</span>', [
-                        [__('Users'), ['admin'=>true, 'controller' => 'Users', 'action' => 'index']],
-                        [__('Settings'), ['admin'=>true,'controller' => 'Setting', 'action' => 'index']],
-                        [__('Expenses Types'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'expenses_types']],
-                        [__('Vendors'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'vendors']],
+                        [__('Users'), ['prefix'=>'admin', 'controller' => 'Users', 'action' => 'index']],
+                        [__('Settings'), ['prefix'=>'admin','controller' => 'Setting', 'action' => 'index']],
+                        [__('Expenses Types'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses_types']],
+                        [__('Vendors'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'vendors']],
                 ]
                 );
                 echo $this->Menu->groupLink('<span class="icon fa fa-gears"></span><span class="title">' .
                 __('Expenses Management') . '</span>', [
-                [__('Add An Expense'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'add_expense']],
-                [__('View All Expenses'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'expenses']],
-                [__('View Pending Expenses'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'expenses']],
-                [__('View Approved Expenses'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'expenses']],
-                [__('View Rejected Expenses'), ['admin'=>true,'controller' => 'Expenses', 'action' => 'expenses']],
+                [__('Add An Expense'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'add_expense']],
+                [__('View All Expenses'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses']],
+                [__('View Pending Expenses'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses']],
+                [__('View Approved Expenses'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses']],
+                [__('View Rejected Expenses'), ['prefix'=>'admin','controller' => 'Expenses', 'action' => 'expenses']],
                 ]
                 );
                 echo $this->Menu->groupLink('<span class="icon fa fa-gears"></span><span class="title">' .
                 __('Profile Management') . '</span>', [
-                [__('Manage My Profile'), ['admin'=>true,'controller' => 'Users', 'action' => 'profile']],
-                [__('Logout'), ['admin'=>true,'controller' => 'Users', 'action' => 'logout']],
+                [__('Manage My Profile'), ['prefix'=>'admin','controller' => 'Users', 'action' => 'profile']],
+                [__('Logout'), ['prefix'=>'admin','controller' => 'Users', 'action' => 'logout']],
                 ]
                 );
                 // $navbar_sides = App\Core\Setting::read('Menu.Side');
