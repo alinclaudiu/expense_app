@@ -58,9 +58,6 @@
     <?=$this->Html->script('//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js')?>
     <?=$this->Html->script('//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js')?>
     <?=$this->Html->script('app')?>
-    <script>
-        $('#datetimepicker2').datetimepicker();
-    </script>
     <?=$this->fetch('script')?>
 </body>
 </html>

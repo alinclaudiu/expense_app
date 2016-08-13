@@ -29,8 +29,3 @@ $this->Html->addCrumb(__('Add Expense'));
         </div>
     </div>
 </div>
-        <script>
-            $('#datepicker').datepicker({
-                format: 'mm-dd-yyyy'
-            });
-        </script>
