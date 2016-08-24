@@ -19,7 +19,7 @@ $this->Html->addCrumb(__('Add Expense'));
                         echo $this->Form->input('reference_no', array('readonly'=>'readonly'));
                         echo $this->Form->input('description');
                         echo $this->Form->input('vendor_id');
-                        echo $this->Form->input('expense_date');
+                        echo $this->Form->input('expense_date',['type'=>'text', 'class'=>'datepicker']);
                         echo $this->Form->input('amount');
                         echo $this->Form->input('id');
                     ?>

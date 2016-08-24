@@ -53,6 +53,9 @@ class AppController extends Controller
         $this->loadModel('ExpensesTypes');
         $this->loadModel('Vendors');
         $this->loadModel('Users');
+        $this->loadModel('RolesResources');
+        $this->loadModel('Logs');
+
         $this->loadComponent('Auth', [
             /*'authorize' => [
                 'TinyAuth.Tiny' => [
@@ -149,7 +152,6 @@ class AppController extends Controller
 
     public function checkUserPermission($role, $resource, $type)
     {
-        $this->loadModel('RolesResources');
         $role_resource = TableRegistry::get('RolesResources');
         $query = $role_resource->find();
         $query->select(['permission']);
@@ -172,5 +174,15 @@ class AppController extends Controller
             ->subject($subject)
             ->send($message);
         return $email;
+    }
+
+    public function writeLog($resource, $description){
+        $this->request->data['user_id'] = $this->Auth->user('id');
+        $this->request->data['resource_id'] = $resource;
+        $this->request->data['details'] = $description;
+        $log = $this->Logs->newEntity();
+        $log = $this->Logs->patchEntity($log, $this->request->data);
+        $saved_log = $this->Logs->save($log);
+        return $saved_log;
     }
 }

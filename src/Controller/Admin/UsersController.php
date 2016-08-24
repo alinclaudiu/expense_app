@@ -299,6 +299,10 @@ class UsersController extends AppController
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
+                $log_details = $this->Auth->user('full_name').' Logged in on '.date
+                    ('Y-m-d H:i:s');
+                $resource_id = 1;
+                $this->writeLog($resource_id, $log_details);
                 $this->Flash->success(__('Login successful'));
 
                 return $this->redirect($this->Auth->redirectUrl());

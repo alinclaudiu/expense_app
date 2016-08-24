@@ -50,7 +50,8 @@ $this->Html->addCrumb(__('<%= Inflector::humanize($action) %>'));
                 $fieldData = $schema->column($field);
                 if (in_array($fieldData['type'], ['date', 'datetime', 'time']) && (!empty($fieldData['null']))) {
 %>
-                    echo $this->Form->input('<%= $field %>', ['empty' => true]);
+                    echo $this->Form->input('<%= $field %>', ['empty' => true, 'type' => 'text', 'class' => 'datepicker']);
+
 <%
                 } else {
 %>

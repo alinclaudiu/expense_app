@@ -31,7 +31,7 @@ function setStatus($status){
             <div class="card-header">
                 <div class="card-title">
                     <div class="title">
-                        <?=__('Vendors List')?>
+                        <?=__('Expenses List')?>
                     </div>
                 </div>
                 <div class="pull-right card-action">

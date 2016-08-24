@@ -99,6 +99,9 @@ class ExpensesController extends AppController
                 $saved_expense = $this->Expenses->save($expense);
                 $admin_users = $this->Users->getAdminUsers();
                 if ($saved_expense) {
+                    $log_details = $this->Auth->user('full_name').' added a new expense '.$title.'. on '.date('Y-m-d H:i:s');
+                    $resource_id = 2;
+                    $this->writeLog($resource_id, $log_details);
                     $vendor_name = $this->Vendors->getVendor($vendor);
                     $type = $this->ExpensesTypes->getType($type);
                     $msg = "Dear Admin,\n\n";
@@ -137,19 +140,24 @@ class ExpensesController extends AppController
     {
         $expense = $this->Expenses->get($id);
         $status = $expense['status'];
-        if ($status !== 1 || $status !== 3) {
+        if ($status == 1) {
+            if ($this->request->is(['patch', 'post', 'put'])) {
+                $this->request->data['ExpensesTypes']['updated'] = date('Y-m-d H:i:s');
+                $expense = $this->Expenses->patchEntity($expense, $this->request->data);
+                if ($this->Expenses->save($expense)) {
+                    $log_details = $this->Auth->user('full_name').' updated expense '.$expense['name'].'. on '.date('Y-m-d
+                H:i:s');
+                    $resource_id = 2;
+                    $this->writeLog($resource_id, $log_details);
+                    $this->Flash->success(__('The Expense type has been updated.'));
+                    return $this->redirect(['action' => 'expenses']);
+                } else {
+                    $this->Flash->error(__('The Expense could not be saved. Please, try again.'));
+                }
+            }
+        }else{
             $this->Flash->error(__('Sorry! you cannot update this expense again.'));
             return $this->redirect(['action' => 'expenses']);
-        }
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $this->request->data['ExpensesTypes']['updated'] = date('Y-m-d H:i:s');
-            $expense = $this->Expenses->patchEntity($expense, $this->request->data);
-            if ($this->Expenses->save($expense)) {
-                $this->Flash->success(__('The Expense type has been updated.'));
-                return $this->redirect(['action' => 'expenses']);
-            } else {
-                $this->Flash->error(__('The Expense could not be saved. Please, try again.'));
-            }
         }
         $types = $this->Expenses->ExpensesTypes->find('list');
         $vendors = $this->Expenses->Vendors->find('list');
@@ -167,6 +175,11 @@ class ExpensesController extends AppController
             if ($this->request->is('post')) {
                 $expense = $this->ExpensesTypes->patchEntity($expense, $this->request->data);
                 if ($this->ExpensesTypes->save($expense)) {
+                    $log_details = $this->Auth->user('full_name').' Added expense type '.$this->request->data['name'].'. on '.date
+                        ('Y-m-d
+                H:i:s');
+                    $resource_id = 2;
+                    $this->writeLog($resource_id, $log_details);
                     $this->Flash->success(__('The expenses type has been saved.'));
                     return $this->redirect(['action' => 'expenses_types']);
                 } else {
@@ -190,6 +203,12 @@ class ExpensesController extends AppController
             if ($this->request->is('post')) {
                 $vendors = $this->Vendors->patchEntity($vendors, $this->request->data);
                 if ($this->Vendors->save($vendors)) {
+                    $log_details = $this->Auth->user('full_name').' Added vendor '.$this->request->data['name'].'. on '
+                        .date
+                        ('Y-m-d
+                H:i:s');
+                    $resource_id = 2;
+                    $this->writeLog($resource_id, $log_details);
                     $this->Flash->success(__('The vendor has been saved.'));
                     return $this->redirect(['action' => 'vendors']);
                 } else {
@@ -229,9 +248,19 @@ class ExpensesController extends AppController
                 switch ($code) {
                     case 2;
                         $this->sendNotification($email['email'], 'Expense Request Status Change', $msg_success);
+                        $log_details = $this->Auth->user('full_name').' Updated expenses status of '
+                            .$expense['name'].' to APPROVED on '.date
+                            ('Y-m-d H:i:s');
+                        $resource_id = 2;
+                        $this->writeLog($resource_id, $log_details);
                         $this->Flash->success(__('The Expense has been approved.'));
                         break;
                     case 3;
+                        $log_details = $this->Auth->user('full_name').' Updated expenses status of '
+                            .$expense['name'].' to REJECTED on '.date
+                            ('Y-m-d H:i:s');
+                        $resource_id = 2;
+                        $this->writeLog($resource_id, $log_details);
                         $this->sendNotification($email, 'Expense Request Status Change', $msg_fail);
                         $this->Flash->error(__('The Expense has been rejected.'));
                         break;
